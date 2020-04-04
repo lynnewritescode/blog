@@ -1,17 +1,14 @@
-baseURL: "https://example.com"
-languageCode: "en-us"
-title: "Hugo Novela"
+baseURL: 'https://example.com'
+languageCode: 'en-us'
+title: 'Hugo Novela'
 pygmentsstyle: 'monokai'
 
 # Theme settings
 theme: novela
 paginate: 6
 social:
-  twitter: "#"
-  github: "#"
-  instagram: "#"
-  linkedin: "#"
-  dribbble: "#"
-  youtube: "#"
+  twitter: '#'
+  github: '#'
+  instagram: '#'
 taxonomies:
   author: authors
