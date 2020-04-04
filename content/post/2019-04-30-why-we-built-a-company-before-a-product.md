@@ -5,8 +5,7 @@ hero: /images/hero-6.jpg
 excerpt: this is my excerpt
 timeToRead: 3
 authors:
-  - Thiago Costa
-
+  - Lynne Finnigan
 ---
 
 Hello, world! This is a demo post for `hugo-theme-novela`. Novela is built by the team at [Narative](https://narative.co), and built for everyone that loves the web.
@@ -24,12 +23,12 @@ Do they have the resources necessary to execute on their ideas? Or are they cons
 These are the circumstances that suffocate creativity and destroy value in an organization. That’s why I knew that if I was going to start a company, our first product would have to be the company itself.
 
 ```js
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import styled from "@emotion/styled";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import styled from '@emotion/styled';
 
-import * as SocialIcons from "../../icons/social";
-import mediaqueries from "@styles/media";
+import * as SocialIcons from '../../icons/social';
+import mediaqueries from '@styles/media';
 
 const icons = {
   dribbble: SocialIcons.DribbbleIcon,
@@ -57,13 +56,13 @@ const socialQuery = graphql`
   }
 `;
 
-function SocialLinks({ fill = "#73737D" }: { fill: string }) {
+function SocialLinks({ fill = '#73737D' }: { fill: string }) {
   const result = useStaticQuery(socialQuery);
   const socialOptions = result.allSite.edges[0].node.siteMetadata.social;
 
   return (
     <>
-      {socialOptions.map(option => {
+      {socialOptions.map((option) => {
         const Icon = icons[option.name];
 
         return (
@@ -102,11 +101,11 @@ These are the circumstances that suffocate creativity and destroy value in an or
 ## This is a secondary heading
 
 ```jsx
-import React from "react";
-import { ThemeProvider } from "theme-ui";
-import theme from "./theme";
+import React from 'react';
+import { ThemeProvider } from 'theme-ui';
+import theme from './theme';
 
-export default props => (
+export default (props) => (
   <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
 );
 ```

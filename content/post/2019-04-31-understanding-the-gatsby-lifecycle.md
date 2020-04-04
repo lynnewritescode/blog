@@ -5,11 +5,7 @@ hero: /images/hero-2.jpg
 excerpt: With the growing community interest in Gatsby, we hope to create more resources that make it easier for anyone to grasp the power of this incredible tool.
 timeToRead: 6
 authors:
-  - Thiago Costa
-  - Dennis Brotzky
-  - Brad Tiller
-  - Mack Mansouri
-
+  - Lynne Finnigan
 ---
 
 Hello, world! This is a demo post for `hugo-theme-novela`. Novela is built by the team at [Narative](https://narative.co), and built for everyone that loves the web.
@@ -47,12 +43,12 @@ But it takes more than good ideas to build and grow a business. It takes people 
 But it takes more than good ideas to build and grow a business. It takes people to bring them into reality. Are those people collaborating and sharing their expertise, or are they in conflict and keeping it to themselves?
 
 ```js {5-6}
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import styled from "@emotion/styled";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import styled from '@emotion/styled';
 
-import SocialIcons from "@icons";
-import mediaqueries from "@styles/media";
+import SocialIcons from '@icons';
+import mediaqueries from '@styles/media';
 
 const icons = {
   dribbble: SocialIcons.DribbbleIcon,
@@ -60,16 +56,16 @@ const icons = {
   twitter: SocialIcons.TwitterIcon,
   facebook: SocialIcons.FacebookIcon,
   instagram: SocialIcons.InstagramIcon,
-  github: SocialIcons.GithubIcon
+  github: SocialIcons.GithubIcon,
 };
 
-function SocialLinks({ fill = "#73737D" }: { fill: string }) {
+function SocialLinks({ fill = '#73737D' }: { fill: string }) {
   const result = useStaticQuery(socialQuery);
   const socialOptions = result.allSite.edges[0].node.siteMetadata.social;
 
   return (
     <>
-      {socialOptions.map(option => {
+      {socialOptions.map((option) => {
         const Icon = icons[option.name];
 
         return (
@@ -96,9 +92,9 @@ At Narative, we’ve been fans of Gatsby from day one, using it to build perform
 const Wrapper = ({ children }) => (
   <div
     style={{
-      background: "papayawhip",
-      width: "100%",
-      padding: "2rem"
+      background: 'papayawhip',
+      width: '100%',
+      padding: '2rem',
     }}
   >
     {children}
@@ -106,7 +102,7 @@ const Wrapper = ({ children }) => (
 );
 
 const Title = () => (
-  <h2 style={{ color: "palevioletred", textAlign: "center" }}>
+  <h2 style={{ color: 'palevioletred', textAlign: 'center' }}>
     Hello World!
     <br />
     Try Novela Gatsby Theme.
@@ -163,7 +159,7 @@ function MDX({ content, children, ...props }) {
   return (
     <MDXProvider components={components}>
       <MDXBody>
-        <MDXRenderer isDark={colorMode === "dark"} {...props}>
+        <MDXRenderer isDark={colorMode === 'dark'} {...props}>
           {content}
         </MDXRenderer>
         {children}
